@@ -25,5 +25,12 @@ public class SetingActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        btnTutorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(),TutorialActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

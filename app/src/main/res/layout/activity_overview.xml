@@ -46,9 +46,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/speedboat_atas"
                 android:id="@+id/imgOverSpeedAtas"
                 android:layout_margin="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/speedboat_atas"/>
                 <TextView
                     android:layout_width="20dp"
                     android:layout_height="25dp"
@@ -107,7 +110,7 @@
                     android:text="4"
                     android:textColor="@color/white"
                     android:layout_marginLeft="250dp"
-                    android:layout_marginTop="35dp"
+                    android:layout_marginTop="45dp"
                     android:id="@+id/tvOverGGas4"/>
                 <TextView
                     android:layout_width="25dp"
@@ -117,7 +120,7 @@
                     android:text="5"
                     android:textColor="@color/white"
                     android:layout_marginLeft="215dp"
-                    android:layout_marginTop="35dp"
+                    android:layout_marginTop="45dp"
                     android:id="@+id/tvOverGGas5"/>
                 <TextView
                     android:layout_width="25dp"
@@ -126,8 +129,8 @@
                     android:background="@drawable/gambar_gas"
                     android:text="6"
                     android:textColor="@color/white"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="55dp"
                     android:id="@+id/tvOverGGas6"/>
                 <TextView
                     android:layout_width="25dp"
@@ -152,15 +155,15 @@
                     android:layout_margin="10dp">
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginRight="5dp"
+                        android:layout_margin="20dp"
                         android:src="@drawable/speedboat_samping"
                         android:id="@+id/imgOverSpeedSamping"/>
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
                         android:layout_weight="2"
                         android:src="@drawable/speedboat_belakang"
                         android:id="@+id/imgOverSpeedBelakang"/>
@@ -221,19 +224,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:layout_margin="10dp"
                         android:text="Sonar"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/radar"
-                        android:id="@+id/imgOverSonar"
-                        android:layout_margin="5dp"/>
+                        android:id="@+id/imgOverSonar"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvOverSonar"
                         android:text="Terdeteksi"
+                        android:layout_margin="10dp"
                         android:textColor="@color/white"/>
                 </LinearLayout>
                 <LinearLayout
@@ -248,19 +252,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:layout_margin="10dp"
                         android:text="Pintu"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/pintu"
-                        android:id="@+id/imgOverPintu"
-                        android:layout_margin="5dp"/>
+                        android:id="@+id/imgOverPintu"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvOverPintu"
                         android:text="Tertutup"
+                        android:layout_margin="10dp"
                         android:textColor="@color/white"/>
                 </LinearLayout>
             </LinearLayout>
@@ -281,18 +286,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:layout_margin="10dp"
                         android:text="Bahan Bakar"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/diesel"
-                        android:id="@+id/imgOverBahanBakar"
-                        android:layout_margin="5dp"/>
+                        android:id="@+id/imgOverBahanBakar"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvOverBahanBakar"
+                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="Terdapat Kebocoran Gas"
                         android:textColor="@color/white"/>
@@ -309,23 +315,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:layout_margin="10dp"
                         android:text="Listrik"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/logo_pln"
-                        android:id="@+id/imgOverlistrik"
-                        android:layout_margin="5dp"/>
+                        android:id="@+id/imgOverlistrik"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvOverBahanBakar"
                         android:text="PLN"
+                        android:layout_margin="10dp"
                         android:textColor="@color/white"/>
                 </LinearLayout>
             </LinearLayout>
-            <ListView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -333,9 +340,74 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/lvOverNotif"
-                android:orientation="horizontal">
-            </ListView>
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/costume_notif_background"
+                    android:id="@+id/nOver1">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/imgOverNotif1"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/warning_kuning"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Test Test Test Test Test Test Test Test "
+                        android:id="@+id/tvOverNotif1"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/costume_notif_background"
+                    android:id="@+id/nOver2">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/imgOverNotif2"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/warning_kuning"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Test Test Test Test Test Test Test Test "
+                        android:id="@+id/tvOverNotif2"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/costume_notif_background"
+                    android:id="@+id/nOver3">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/imgOverNotif3"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/warning_kuning"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Test Test Test Test Test Test Test Test "
+                        android:id="@+id/tvOverNotif3"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

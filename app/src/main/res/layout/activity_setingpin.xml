@@ -60,18 +60,30 @@
                 android:text="Masukan PIN Device"
                 android:textSize="20dp"
                 android:textColor="@color/white"/>
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/costume_background_w"
-                android:inputType="numberPassword"
-                android:hint="*****"
-                android:id="@+id/iPin"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:textSize="20dp"/>
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/costume_background_w"
+                    android:inputType="numberPassword"
+                    android:hint="*****"
+                    android:id="@+id/iPin"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/eye"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btnPinPas"/>
+            </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

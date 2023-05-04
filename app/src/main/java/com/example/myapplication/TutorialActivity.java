@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,5 +28,19 @@ public class TutorialActivity extends AppCompatActivity {
         SimpleDateFormat Jam = new SimpleDateFormat("h:m:s a");
         String sJam = Jam.format(newDate.getTime()) + " WIB";
         tvJam.setText(sJam);
+        btnOver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(),OverviewActivity.class);
+                startActivity(i);
+            }
+        });
+        btnSeting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(),SetingpinActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

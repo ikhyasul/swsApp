@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 public class SetingpinActivity extends AppCompatActivity {
     String iPin = "1234";
+    boolean bPassView = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +27,26 @@ public class SetingpinActivity extends AppCompatActivity {
         LinearLayout btnTutorial = (LinearLayout) findViewById(R.id.btnPinTutorial);
         EditText editText = (EditText)findViewById(R.id.iPin);
         ImageView imageView = (ImageView) findViewById(R.id.btnPinEnter);
+        ImageView View = (ImageView)findViewById(R.id.btnPinPas);
+        View.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View view) {
+                if (bPassView){editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);}
+                else {editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);}
+                bPassView = !bPassView;
+            }
+        });
         btnOver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i= new Intent(getApplicationContext(),OverviewActivity.class);
+                startActivity(i);
+            }
+        });
+        btnTutorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(),TutorialActivity.class);
                 startActivity(i);
             }
         });
