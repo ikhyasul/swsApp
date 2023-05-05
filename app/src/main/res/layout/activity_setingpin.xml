@@ -54,36 +54,29 @@
                 android:textSize="30dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Masukan PIN Device"
-                android:textSize="20dp"
-                android:textColor="@color/white"/>
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/costume_background_w"
-                    android:inputType="numberPassword"
-                    android:hint="*****"
-                    android:id="@+id/iPin"
-                    android:gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/eye"
-                    android:layout_margin="5dp"
-                    android:id="@+id/btnPinPas"/>
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:hint="Masukan PIN Device"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@color/button2"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Pin Device"
+                app:helperTextTextColor="@color/white">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/white"
+                        android:id="@+id/iPin"/>
+            </com.google.android.material.textfield.TextInputLayout>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

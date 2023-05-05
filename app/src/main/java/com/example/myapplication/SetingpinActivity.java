@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class SetingpinActivity extends AppCompatActivity {
-    String iPin = "1234";
+    String DeveloperCode = "3269633333";
     boolean bPassView = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +27,6 @@ public class SetingpinActivity extends AppCompatActivity {
         LinearLayout btnTutorial = (LinearLayout) findViewById(R.id.btnPinTutorial);
         EditText editText = (EditText)findViewById(R.id.iPin);
         ImageView imageView = (ImageView) findViewById(R.id.btnPinEnter);
-        ImageView View = (ImageView)findViewById(R.id.btnPinPas);
-        View.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(android.view.View view) {
-                if (bPassView){editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);}
-                else {editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);}
-                bPassView = !bPassView;
-            }
-        });
         btnOver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,9 +44,13 @@ public class SetingpinActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (editText.getText().toString().equals(iPin)){
+                if (editText.getText().toString().equals(DeveloperCode)){
                     Intent i= new Intent(getApplicationContext(),SetingActivity.class);
                     startActivity(i);
+                } else if (editText.getText().toString().length() > 6) {
+                    NOTIF("Pin Terlalu Panjang");
+                } else if (editText.getText().toString().length() < 6) {
+                    NOTIF("Pin Terlalu Pendek");
                 } else {
                     NOTIF("Pin Salah");
                 }
