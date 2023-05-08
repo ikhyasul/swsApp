@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background3"
-    android:padding="10dp"
-    android:orientation="vertical"
-    tools:context=".SetingActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="end"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvSetingDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Rabu, 10 November 2021"
-            />
-        <TextView
-            android:id="@+id/tvSetingTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="30dp"
-            android:textStyle="bold"
-            android:text="15.34.57 WIB"
-            />
-    </LinearLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment4">
+
+    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,18 +21,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/seting_di"
-                    android:layout_margin="50dp"/>
+                    android:layout_margin="20dp"
+                    android:src="@drawable/seting_di" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/swSetingGas1"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="58dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/costume_button_g"
                     android:padding="3dp"
                     android:text=" Gas 1 "
@@ -69,7 +46,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="98dp"
+                    android:layout_marginTop="35dp"
                     android:padding="3dp"
                     android:background="@drawable/costume_button_g"
                     android:text=" Gas 2 "
@@ -85,7 +62,7 @@
                     android:layout_height="30dp"
                     android:text=" Gas 3 "
                     android:textColor="@color/white"
-                    android:layout_marginTop="138dp"
+                    android:layout_marginTop="60dp"
                     android:id="@+id/swSetingGas3"
                     android:layout_marginLeft="10dp"/>
                 <androidx.appcompat.widget.SwitchCompat
@@ -332,90 +309,5 @@
                 android:id="@+id/btnSetingPin"/>
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:paddingLeft="150dp"
-        android:paddingRight="150dp"
-        android:paddingBottom="10dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="@drawable/costume_button2"
-            android:id="@+id/btnSetingOver"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/overview"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Overview"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="10dp"
-            android:layout_margin="10dp"
-            android:background="#FFFFFF"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="@drawable/costume_button1"
-            android:id="@+id/btnSetingSeting"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/setting"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Setting"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="10dp"
-            android:layout_margin="10dp"
-            android:background="#FFFFFF"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="@drawable/costume_button2"
-            android:id="@+id/btnSetingTutorial"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/tutorial"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Tutorial"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+
+</FrameLayout>
