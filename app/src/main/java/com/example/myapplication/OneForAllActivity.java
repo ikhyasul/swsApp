@@ -23,7 +23,7 @@ import java.util.Locale;
 public class OneForAllActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
-    FrameLayout frameLayout;
+    LinearLayout Seting, Pin;
     private Handler handlerTime = new Handler(), handlerFast = new Handler();
     private Runnable runnableTime, runnableFast;
     LinearLayout btnOver, btnSetting, btnTutorial;
@@ -53,24 +53,21 @@ public class OneForAllActivity extends AppCompatActivity {
         tvTanggal = (TextView) findViewById(R.id.tvOfaDate);
         tvJam = (TextView) findViewById(R.id.tvOfaTime);
 
+        Seting = (LinearLayout) findViewById(R.id.lOfaSeting);
+        Pin = (LinearLayout) findViewById(R.id.lOfaPin);
         viewPager = findViewById(R.id.view_pager);
         SwipePagerAdapter pagerAdapter = new SwipePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
-
-        frameLayout = (FrameLayout)findViewById(R.id.container);
-        FragmentManager fm = getSupportFragmentManager();
-        fm.beginTransaction().add(R.id.container, new Fragment4()).commit();
 //        FragmentView(1);
 
 //        viewPager.setVisibility(View.GONE);
 //        frameLayout.setVisibility(View.VISIBLE);
+        Seting();
 
         if (iSend == 0){
-            viewPager.setVisibility(View.VISIBLE);
-            frameLayout.setVisibility(View.GONE);
+            FragmentView(0);
         } else {
-            viewPager.setVisibility(View.GONE);
-            frameLayout.setVisibility(View.VISIBLE);
+            FragmentView(1);
             btnOver.setBackgroundResource(R.drawable.costume_button2);
             btnSetting.setBackgroundResource(R.drawable.costume_button1);
             btnTutorial.setBackgroundResource(R.drawable.costume_button2);
@@ -82,8 +79,6 @@ public class OneForAllActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(0);
                 editor.putInt("fase", 0);
                 editor.apply();
-//                viewPager.setVisibility(View.VISIBLE);
-//                frameLayout.setVisibility(View.GONE);
             }
         });
         btnSetting.setOnClickListener(new View.OnClickListener() {
@@ -92,8 +87,6 @@ public class OneForAllActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(1);
                 editor.putInt("fase", 0);
                 editor.apply();
-//                viewPager.setVisibility(View.VISIBLE);
-//                frameLayout.setVisibility(View.GONE);
             }
         });
         btnTutorial.setOnClickListener(new View.OnClickListener() {
@@ -102,8 +95,6 @@ public class OneForAllActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(2);
                 editor.putInt("fase", 0);
                 editor.apply();
-//                viewPager.setVisibility(View.VISIBLE);
-//                frameLayout.setVisibility(View.GONE);
             }
         });
 
@@ -118,19 +109,9 @@ public class OneForAllActivity extends AppCompatActivity {
                 iSend = sharedPref.getInt("fase", 0);
                 if (iSend != lastSend){
                     if (iSend == 0){
-                        viewPager.setVisibility(View.VISIBLE);
-                        frameLayout.setVisibility(View.GONE);
+                        FragmentView(0);
                     } else if (iSend == 1) {
-                        viewPager.setVisibility(View.GONE);
-                        frameLayout.setVisibility(View.VISIBLE);
-//                        FragmentView(1);
-                        btnOver.setBackgroundResource(R.drawable.costume_button2);
-                        btnSetting.setBackgroundResource(R.drawable.costume_button1);
-                        btnTutorial.setBackgroundResource(R.drawable.costume_button2);
-                    } else if (iSend == 2){
-                        viewPager.setVisibility(View.GONE);
-                        frameLayout.setVisibility(View.VISIBLE);
-//                        FragmentView(2);
+                        FragmentView(1);
                         btnOver.setBackgroundResource(R.drawable.costume_button2);
                         btnSetting.setBackgroundResource(R.drawable.costume_button1);
                         btnTutorial.setBackgroundResource(R.drawable.costume_button2);
@@ -177,16 +158,30 @@ public class OneForAllActivity extends AppCompatActivity {
     }
 
     private void FragmentView(int iVall){
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        if (iVall == 1){
-//            fragmentTransaction.replace(R.id.container, new Fragment4());
-//        } else if (iVall == 2) {
-//            fragmentTransaction.replace(R.id.container, new Fragment5());
-//        }
-//        fragmentTransaction.commit();
+        if (iVall == 0){
+            viewPager.setVisibility(View.VISIBLE);
+            Seting.setVisibility(View.GONE);
+            Pin.setVisibility(View.GONE);
+        } else if (iVall == 1) {
+            viewPager.setVisibility(View.GONE);
+            Seting.setVisibility(View.VISIBLE);
+            Pin.setVisibility(View.GONE);
+        } else if (iVall == 2) {
+            viewPager.setVisibility(View.GONE);
+            Seting.setVisibility(View.GONE);
+            Pin.setVisibility(View.VISIBLE);
+        }
     }
 
+    private void Seting(){
+        TextView btnPin = (TextView) findViewById(R.id.btnOfaSetingPin);
+        btnPin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentView(2);
+            }
+        });
+    }
 
     @Override
     protected void onDestroy() {

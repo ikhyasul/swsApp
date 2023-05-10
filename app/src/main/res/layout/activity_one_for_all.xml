@@ -38,11 +38,390 @@
         android:layout_weight="1"
         android:layout_height="match_parent"/>
 
-    <FrameLayout
-        android:id="@+id/container"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lOfaSeting"
         android:layout_weight="1"
-        android:layout_height="match_parent"/>
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/seting_di" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swOfaSetingGas1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/costume_button_g"
+                    android:padding="3dp"
+                    android:text=" Gas 1 "
+                    android:textColor="@color/white"
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swOfaSetingGas2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="43dp"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:text=" Gas 2 "
+                    android:textColor="@color/white"
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Gas 3 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="80dp"
+                    android:id="@+id/swOfaSetingGas3"
+                    android:layout_marginLeft="10dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Gas 4 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="43dp"
+                    android:id="@+id/swOfaSetingGas4"
+                    android:layout_marginLeft="450dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Gas 5 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/swOfaSetingGas5"
+                    android:layout_marginLeft="450dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Gas 6 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="237dp"
+                    android:id="@+id/swOfaSetingGas6"
+                    android:layout_marginLeft="10dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Gas 7 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="275dp"
+                    android:id="@+id/swOfaSetingGas7"
+                    android:layout_marginLeft="10dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Door 1 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="217dp"
+                    android:id="@+id/swOfaSetingDoor1"
+                    android:layout_marginLeft="450dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"
+                    android:padding="3dp"
+                    android:background="@drawable/costume_button_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=" Door 2 "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="255dp"
+                    android:id="@+id/swOfaSetingDoor2"
+                    android:layout_marginLeft="450dp"/>
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Nama Perahu"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                android:layout_margin="20dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:counterTextColor="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Ship Name"
+                app:helperTextTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:id="@+id/edtOfaSetingName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button_gradient"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/btnOfaSetingRoll">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pitch_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roll Calibration"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button_gradient"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/btnOfaSetingRoll">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pitch Calibration"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button0"
+                android:paddingTop="2dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pitch Range Warning"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="0  "/>
+                    <com.google.android.material.slider.Slider
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="10dp"
+                        app:thumbColor="@color/white"
+                        app:trackColorActive="@color/white"
+                        android:id="@+id/sldOfaSetingPitch"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="  5"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button0"
+                android:layout_margin="5dp"
+                android:paddingTop="2dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roll Range Warning"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="0  "/>
+                    <com.google.android.material.slider.Slider
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="10dp"
+                        app:thumbColor="@color/white"
+                        app:trackColorActive="@color/white"
+                        android:id="@+id/sldOfaSetingRoll"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="  5"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Simpan Perubahan"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/costume_button_g"
+                android:id="@+id/btnOfaSetingSimpan"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ubah Pin"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/costume_button_grey"
+                android:layout_margin="5dp"
+                android:id="@+id/btnOfaSetingPin"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lOfaPin"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/costume_button2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UBAH PIN DEVICE"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan PIN Device Lagi"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@color/button2"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Pin Device"
+                app:helperTextTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:textColor="@color/white"
+                    android:id="@+id/edtOfaPin1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan PIN Device Baru"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@color/button2"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Pin Device"
+                app:helperTextTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:textColor="@color/white"
+                    android:id="@+id/edtOfaPin2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@drawable/ennter"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button_g"
+                android:id="@+id/btnOfaPinEnter"/>
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
