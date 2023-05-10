@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment5">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/costume_button2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UBAH PIN DEVICE"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan PIN Device Lagi"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@color/button2"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Pin Device"
+                app:helperTextTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:textColor="@color/white"
+                    android:id="@+id/iPinUbah2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan PIN Device Baru"
+                android:textColorHint="@color/white"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@color/button2"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="Enter Pin Device"
+                app:helperTextTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:textColor="@color/white"
+                    android:id="@+id/iPinUbah1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ennter"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/costume_button_g"
+                android:id="@+id/btnPinEnter"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

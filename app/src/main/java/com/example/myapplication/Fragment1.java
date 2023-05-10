@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,7 +15,7 @@ import android.widget.TextView;
 
 public class Fragment1 extends Fragment {
 
-    TextView tvNotif1, tvNotif2, tvNotif3;
+    TextView tvNotif1, tvNotif2, tvNotif3, Nama;
     LinearLayout lNotif1, lNotif2, lNotif3;
     ImageView imgNotif1, imgNotif2, imgNotif3;
     String[] sNotif = {"","",""};
@@ -40,6 +42,12 @@ public class Fragment1 extends Fragment {
         tvNotif1 = (TextView)view.findViewById(R.id.tvOverNotif1);
         tvNotif2 = (TextView)view.findViewById(R.id.tvOverNotif2);
         tvNotif3 = (TextView)view.findViewById(R.id.tvOverNotif3);
+        Nama = (TextView) view.findViewById(R.id.tvOverNama);
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("MySettings", Context.MODE_PRIVATE);
+        String sName = sharedPref.getString("nama", "Belum Dinamai");
+        Nama.setText(sName);
+
         Notif("Terdapat kebocoran gas", 1);
         Notif("Sonar tidak terdeteksi", 2);
         Notif("Pintu Tertutup", 3);
