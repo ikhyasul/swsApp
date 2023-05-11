@@ -173,7 +173,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukan Nama Perahu"
+                android:hint="Nama Kapal"
                 android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
                 android:layout_margin="20dp"
@@ -267,6 +267,9 @@
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="10dp"
+                        android:valueFrom="0"
+                        android:valueTo="5"
+                        android:stepSize="0.01"
                         app:thumbColor="@color/white"
                         app:trackColorActive="@color/white"
                         android:id="@+id/sldOfaSetingPitch"/>
@@ -308,6 +311,9 @@
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="10dp"
+                        android:valueFrom="0"
+                        android:valueTo="5"
+                        android:stepSize="0.01"
                         app:thumbColor="@color/white"
                         app:trackColorActive="@color/white"
                         android:id="@+id/sldOfaSetingRoll"/>
@@ -368,7 +374,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukan PIN Device Lagi"
+                android:hint="Masukan PIN Device Baru"
                 android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
                 app:boxBackgroundColor="@color/button2"
@@ -391,7 +397,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukan PIN Device Baru"
+                android:hint="Masukan PIN Device Lagi"
                 android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
                 app:boxBackgroundColor="@color/button2"
